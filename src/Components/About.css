@@ -1,0 +1,86 @@
+.About{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow:row wrap;
+    height:100vh;
+}
+.About .About-Intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:400px;
+    font-size:20px;
+    color:#36454F;
+    font-family: "Tajawal", sans-serif;
+    text-align: right;
+    direction: rtl;
+    
+}
+.About div .About-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #36454F;
+    font-family: 'Reem Kufi',sans-serif;
+}
+.About .Main-Menu{
+    position: relative;
+    border-left:2px solid #111b6c;
+    border-right:2px solid #2f53ad;
+    border-top: 2px solid #36454F;
+    border-bottom:2px solid #36454F;
+    width:200px;
+    height: 200px;
+    transform: rotate(135deg);
+}
+.About .Main-Menu button{
+    outline: none;
+    border:1.5px solid #36454F;
+    border-radius: 50%;
+    padding:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    position: absolute;
+    color: #36454F;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    transform: rotate(225deg);
+}
+.About .Main-Menu button:hover{
+    color:#4984B8;
+    border:2px solid #4984B8;
+} 
+.About .Main-Menu button.active{
+    color:#4984B8;
+    border:2px solid #4984B8;
+    background-color: #36454F;
+}
+.About .Main-Menu .Mission-Section{
+    left:194px;
+    top:194px;
+    
+}
+.About .Main-Menu .Vision-Section{
+    left:-44px;
+    top:-44px;
+} 
+.About .Main-Menu .Values-Section{
+    top:194.5px;
+    left:-45px;
+}
+.About .Main-Menu .About-Section{
+    top:-45px;
+    left:194.5px;
+}
+.Main-Menu-Logo{
+    width:300px;
+    height: 300px;
+    transform:rotate(225deg);
+    position:absolute;
+    left:-50px;
+    top:-50px;
+}

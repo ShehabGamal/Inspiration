@@ -1,0 +1,59 @@
+.Services{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    height:100vh;
+    width: 70%;
+    margin:0 auto;
+    gap:40px;
+}
+.Services-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width:80%;
+    column-gap:50px;
+    row-gap: 30px;
+    
+}
+.Card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: white;
+    color:#36454F;
+    border-radius: 10%;
+    width:300px;
+    height: 180px;
+}
+.Header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#36454F;
+    font-size:2rem;
+    font-family: 'Reem Kufi',sans-serif;
+}
+.Card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.Card-Icon{
+    width:70px;
+    height: 70px;
+}
+.Card-Header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#36454F;
+    font-size: 1.2rem;
+    font-family: 'Reem Kufi',sans-serif;
+    width: auto;
+    text-align: right;
+    
+} 
