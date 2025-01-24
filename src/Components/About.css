@@ -84,3 +84,9 @@
     left:-50px;
     top:-50px;
 }
+div div div ul{
+    list-style: none;
+}
+.list-style{
+    margin-left:10px;
+}
