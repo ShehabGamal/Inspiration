@@ -1,39 +1,37 @@
+import { useState,useEffect } from "react";
 import "./Portfolio.css";
 
 function Portfolio() {
+  const clients = [
+    { name: "El MrooJ CO", info: "Trading & Contract" },
+    { name: "Aseel CO", info: "Import & Export" },
+    { name: "FH Corp", info: "FMGC" },
+    { name: "Business Wolves", info: "Educational Academy" },
+    { name: "MIL", info: "Law & Immigration Firm" },
+    { name: "IconX", info: "Software Development" },
+  ];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % clients.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [clients.length]);
   return (
     <div className="Portfolio" id="Portfolio">
-      <div className="Portfolio" id="Portfolio">
-        <div className="scrolling-content">
-          <div className="card">
-            <div>El MrooJ CO</div>
-            <div className="hidden-child">Trading & Contract</div>
-          </div>
-          <div className="card">
-            <div>Aseel CO</div>
-            <div className="hidden-child">Import & Export</div>
-          </div>
-          <div className="card">
-            <div>FH Corp</div>
-            <div className="hidden-child">FMGC</div>
-          </div>
-          <div className="card">
-            <div>NAL LAW</div>
-            <div className="hidden-child">Law & Consultation Firm</div>
-          </div>
-          <div className="card">
-            <div>Business Wolves</div>
-            <div className="hidden-child">Educational Academy</div>
-          </div>
-          <div className="card">
-            <div>MIL</div>
-            <div className="hidden-child">Law & Immigration Firm</div>
-          </div>
-          <div className="card">
-            <div>IconX</div>
-            <div className="hidden-child">Software Development</div>
-          </div>
+      <h1 className="quote">We Love These Guys</h1>
+      <div className="row">
+      {clients.map((client, index) => (
+        <div
+          key={index}
+          className={`card ${activeIndex === index ? "active" : ""}`}
+        > 
+          <div className="client-name">{client.name}</div>
+          <div className="client-info">{client.info}</div>
         </div>
+      ))}
       </div>
     </div>
   );

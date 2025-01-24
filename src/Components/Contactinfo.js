@@ -9,3 +9,4 @@ function Contactinfo() {
 }
 
 export default Contactinfo;
+ 

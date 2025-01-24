@@ -1,42 +1,65 @@
-
 .Portfolio {
-    display: flex;
-    overflow: hidden; 
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-color: #f4f4f9;
-  }
-  
-  .Portfolio .scrolling-content {
-    display: flex;
-    animation: scroll 10s infinite;
-  }
-  
- 
-  .card {
-    display: inline-block;
-    margin: 10px;
-    padding: 20px;
-    background: #007bff;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 150px; 
-  }
-  
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0); 
-    }
-    50%{
-        transform: translate3d(25%);
-    }
-    100% {
-      transform: translateX(50%); 
-    }
-  }
-  
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Portfolio .quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #36454f;
+  font-family: "Reem Kufi", sans-serif;
+}
+.Portfolio .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 35px;
+  padding: 15px;
+  background: white;
+  color: #36454f;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap:10px;
+}
+.card.active {
+  width: 200px;
+  height: 70px;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.client-name {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.client-info {
+  font-size: 14px;
+  display:none;
+  transition: display 0.3s ease;
+}
+.card.active .client-info {
+  opacity: 1;
+  display:flex;
+}
