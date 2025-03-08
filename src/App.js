@@ -6,6 +6,7 @@ import Portfolio from './Components/Portfolio';
 import Contactinfo from './Components/Contactinfo';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App" id="Home">

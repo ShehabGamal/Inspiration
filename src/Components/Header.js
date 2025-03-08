@@ -19,10 +19,10 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+ 
   const headerStyle = {
     width: "100%",
-    backgroundColor: isFixed ? "white" : "transparent",
+    backgroundColor: isFixed ? "white" : "#8ED6E0",
     position: isFixed ? "fixed" : "relative",
     top: 0,
     zIndex: 10,

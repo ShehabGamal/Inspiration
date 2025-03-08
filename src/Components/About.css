@@ -1,92 +1,127 @@
-.About{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow:row wrap;
-    height:100vh;
+.About {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #f4f7fc;
 }
-.About .About-Intro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:400px;
-    font-size:20px;
-    color:#36454F;
-    font-family: "Tajawal", sans-serif;
-    text-align: right;
-    direction: rtl;
-    
+
+.content-section {
+  max-width: 500px;
+  text-align: right;
+  direction: rtl;
 }
-.About div .About-Header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #36454F;
-    font-family: 'Reem Kufi',sans-serif;
+
+.About-Header {
+  color: #1C1E2E;
+  font-family: "Cairo", sans-serif;
+  font-size: 28px;
+  text-align: center;
 }
-.About .Main-Menu{
-    position: relative;
-    border-left:2px solid #111b6c;
-    border-right:2px solid #2f53ad;
-    border-top: 2px solid #36454F;
-    border-bottom:2px solid #36454F;
-    width:200px;
-    height: 200px;
-    transform: rotate(135deg);
+
+.About-Intro {
+  font-size: 18px;
+  color: #2b2d42;
+  font-family: "Cairo", sans-serif;
+  text-align: right;
+  line-height: 1.6;
 }
-.About .Main-Menu button{
-    outline: none;
-    border:1.5px solid #36454F;
-    border-radius: 50%;
-    padding:5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:transparent;
-    position: absolute;
-    color: #36454F;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    transform: rotate(225deg);
+
+.Main-Menu {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: popIn 0.8s ease-in-out;
+  border:2px solid transparent;
+  transform: rotate(45deg);
 }
-.About .Main-Menu button:hover{
-    color:#4984B8;
-    border:2px solid #4984B8;
-} 
-.About .Main-Menu button.active{
-    color:#4984B8;
-    border:2px solid #4984B8;
-    background-color: #36454F;
+
+.Main-Menu-Logo {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform: rotate(-45deg);
 }
-.About .Main-Menu .Mission-Section{
-    left:194px;
-    top:194px;
-    
+
+.menu-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
 }
-.About .Main-Menu .Vision-Section{
-    left:-44px;
-    top:-44px;
-} 
-.About .Main-Menu .Values-Section{
-    top:194.5px;
-    left:-45px;
+
+.menu-btn:nth-child(2) { top: -50px; left: 38%; transform:translateX(-210%) rotate(-45deg);} 
+.menu-btn:nth-child(3) { bottom: -50px; left: 38%;transform:translateX(180%) rotate(-45deg);} 
+.menu-btn:nth-child(4) { left: -50px; top: 38%;transform:translateY(180%) rotate(-45deg); } 
+.menu-btn:nth-child(5) { right: -50px; top: 38%; transform:translateY(-210%) rotate(-45deg); }
+
+.Main-Menu:has(.menu-btn:nth-child(2).active) {
+  border-top-color:#9333EA;
+  border-left-color:#4F46E5;
 }
-.About .Main-Menu .About-Section{
-    top:-45px;
-    left:194.5px;
+
+.Main-Menu:has(.menu-btn:nth-child(3).active) {
+  border-bottom-color:#9333EA;
+  border-right-color:#4F46E5;
 }
-.Main-Menu-Logo{
-    width:300px;
-    height: 300px;
-    transform:rotate(225deg);
-    position:absolute;
-    left:-50px;
-    top:-50px;
+
+.Main-Menu:has(.menu-btn:nth-child(4).active) {
+  border-bottom-color:#9333EA;
+  border-left-color:#4F46E5;
 }
-div div div ul{
-    list-style: none;
+
+.Main-Menu:has(.menu-btn:nth-child(5).active) {
+  border-top-color:#9333EA;
+  border-right-color:#4F46E5;
 }
-.list-style{
-    margin-left:10px;
+
+.menu-btn:hover,
+.menu-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+.menu-btn.active {
+  animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-style {
+  margin-left: 10px;
+  color: #26457D;
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+  }
 }

@@ -1,24 +1,23 @@
 import "./Home.css";
-import { TypeAnimation } from "react-type-animation";
+
 function Home() {
   return (
-    <div className="Home">
-      <div className="RGBLogo"></div>
-      <TypeAnimation
-        sequence={[
-          "مرحباً بكم في صفحتنا الرسميه",
-          1000,
-          "ًWelcome To Our Official Web Page",
-          1000,
-        ]}
-        wrapper="div"
-        speed={10}
-        className="Introduction"
-        repeat={Infinity}
-        cursor={false}
-      />
+    <section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Inspiration</h1>
+        <p>Elevate your brand with cutting-edge marketing strategies.</p>
     </div>
+    <div class="moving-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div class="pyramid-container">
+        <div class="pyramid"></div>
+    </div>
+</section>
   );
 }
-
 export default Home;
